@@ -1353,3 +1353,33 @@ footer {
         margin: 20px 0;
     }
 }
+
+/* esaf*/
+.section.full-width-image{
+    display: flex;
+    justify-content: center;
+    .default-content-wrapper{
+        max-width: 100%;
+    }
+}
+
+.section.bg-grey.products.columns-container{
+    .columns>div {
+        gap: 0;
+    }
+    @media (width >= 900px) {
+        .columns>div {
+            gap: 0;
+        }
+    }
+    .card-block{
+        max-height: 77px;
+    }
+}
+
+
+@media (width >= 900px) {
+    .columns>div>div {
+        place-self: flex-start;
+    }
+}
