@@ -1,5 +1,5 @@
 .carousel-container {
-  max-width: var(--med-grid-layout);
+  max-width: 100%;
   padding: 0 15px;
   margin: 0 auto;
 }
@@ -43,9 +43,9 @@
   align-items: flex-end;
 }
 
-.carousel .carousel-slide-image {
+/*.carousel .carousel-slide-image {
   width: 65%;
-}
+}*/
 
 @media (width <= 768px) {
   .carousel .carousel-slide-image {
@@ -149,6 +149,7 @@
   align-items: center;
   justify-content: space-between;
   z-index: 2;
+  display: none;
 }
 
 @media (width <= 768px) {
@@ -197,5 +198,16 @@
 @media (width <= 768px) {
   .carousel .carousel-slide .carousel-slide-content[data-align="justify"] {
     --slide-content-width: auto;
+  }
+}
+
+.section.carousel-container{
+  padding: 0;
+  .carousel-wrapper{
+    max-width: 100%;
+  }
+  nav{
+    position: relative;
+    top: -30px;
   }
 }
