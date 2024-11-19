@@ -118,6 +118,17 @@ body {
                 object-position: top;
                 object-fit: cover;
             }
+                &::after {
+                    background: linear-gradient(to top, transparent, rgba(0, 0, 0, .4));
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                    z-index: -1;
+                }
 
             @media (width<=768px) {
                 min-height: unset;
@@ -152,20 +163,28 @@ body {
         .overlay-block {
             position: relative;
             top: -440px;
-            text-align: center;
-            color: #d0262d;
+            text-align: left;
+            color: #FFF;
             font-size: 28px;
-            max-width: 700px;
             margin-left: 10%;
+            display: flex;
+            justify-content: flex-start;
 
             em {
                 color: #3F6470;
             }
             h1{
                 font-weight: 800;
+                color: #d0262d;
+                font-size: 52px;
+                margin-bottom: 40px;
             }
             p{
                 line-height: 40px;
+                font-size: 32px;
+                margin-bottom: 30px;
+                display: flex;
+                max-width: 80%;
             }
             a{
                 text-decoration: none;
@@ -173,7 +192,6 @@ body {
                 background-color: #034EA2;
                 padding: 10px 20px;
                 border-radius: 20px;
-                margin-top: 40px;
             }
         }
 
