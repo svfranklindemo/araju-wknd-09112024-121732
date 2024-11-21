@@ -197,7 +197,7 @@ export default async function decorate(block) {
     languageSelector.id = 'language-selector';
 
     let localeMetaTag = document.querySelector('meta[name="locale"]');
-    const locale = localeMetaTag.getAttribute('content');
+    //const locale = localeMetaTag.getAttribute('content');
     let appendedUrlVal = window.location.href.split(locale+"/")[1];   
     languages.data.forEach((language) => {
       const option = document.createElement('option');
@@ -213,7 +213,7 @@ export default async function decorate(block) {
     // eslint-disable-next-line max-len
     const defaultLanguage = languages.data.find((lang) => lang.locale.toLowerCase() === locale.toLowerCase());
     if (defaultLanguage) {
-      languageSelector.value = defaultLanguage.url;
+      languageSelector.value = defaultLanguage.url+appendedUrlVal;
     }
 
     // Add event listener to handle change event
