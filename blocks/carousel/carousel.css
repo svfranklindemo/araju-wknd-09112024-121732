@@ -30,7 +30,6 @@
 .carousel .carousel-slide {
   flex: 0 0 100%;
   scroll-snap-align: start;
-  display: flex;
   position: relative;
   width: 100%;
 }

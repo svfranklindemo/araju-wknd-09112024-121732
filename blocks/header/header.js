@@ -196,9 +196,15 @@ export default async function decorate(block) {
     const languageSelector = document.createElement('select');
     languageSelector.id = 'language-selector';
 
+    let localeMetaTag = document.querySelector('meta[name="locale"]');
+    const locale = localeMetaTag.getAttribute('content');
+    let appendedUrlVal = window.location.href.split(locale+"/")[1];   
     languages.data.forEach((language) => {
       const option = document.createElement('option');
       option.value = language.url;
+      if(appendedUrlVal){
+        option.value = language.url+appendedUrlVal;
+      }
       option.textContent = language.locale;
       languageSelector.appendChild(option);
     });
