@@ -1,7 +1,7 @@
 const myHeaders = new Headers();
 myHeaders.append("Content-Type", "application/json");
 
-const raw = JSON.stringify({
+/*const raw = JSON.stringify({
     "forceUpdate": true,
     "paths": [
         "/book.json",
@@ -44,8 +44,16 @@ const raw = JSON.stringify({
         "/forms/finance.json"
     ],
     "delete": false
-});
+});*/
 
+const raw = JSON.stringify({
+    "forceUpdate": true,
+    "paths": [
+        "/en/",
+        "en/*"
+    ],
+    "delete": false
+});
 const requestOptions = {
     method: "POST",
     headers: myHeaders,
