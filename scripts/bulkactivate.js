@@ -50,7 +50,7 @@ const raw = JSON.stringify({
     "forceUpdate": true,
     "paths": [
         "/en/",
-        "en/*"
+        "/en/*"
     ],
     "delete": false
 });
